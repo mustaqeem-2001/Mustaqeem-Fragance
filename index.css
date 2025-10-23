@@ -1,0 +1,116 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Instrument Serif",sans-serif, serif;
+    background-color: #201D1D;
+    color: #EFEFEF;
+}
+
+h1, .logo {
+    font-family: "Italianno", sans-serif, serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+
+/* navigation */
+
+.nav {
+    display: flex;
+    justify-content:space-between;
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    font-size: 3.1em;
+}
+
+/* header */
+
+/* .background-image {
+    background-image: url("/images/image02.png");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+} */
+
+.header-content {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+}
+
+
+/* content */
+
+/* Filter */
+
+.filter-list {
+    margin: 25px;
+}
+
+fieldset {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 25px;
+}
+
+legend {
+    font-size: 25px;
+}
+
+input, button, select {
+    border: none;
+     border-radius: 5px;
+}
+
+/* Removes the spinner arrows for Chrome, Safari, Edge, and Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Disables the native control appearance */
+  margin: 0;                /* Ensures no space is reserved for the control */
+}
+
+/* Removes the spinner arrows for Firefox */
+input[type=number] {
+  -moz-appearance: textfield; /* Sets the appearance to look like a standard text field */
+}
+
+label {
+    margin-right: 5px;
+}
+
+.min-filter-price, .max-filter-price {
+    margin: auto;
+}
+
+select {
+    padding: 1px 5px;
+}
+
+.filter-ml {
+    margin: auto;
+}
+
+button {
+    padding: 5px 15px;
+    margin: 10px 0;
+}
+
+.apply-filter {
+    margin-left: 25px;
+}
+
+button:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+}

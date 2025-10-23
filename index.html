@@ -3,38 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Italianno&display=swap" rel="stylesheet">
+    
     <title>Sidiqi Fragance</title>
 </head>
 <body>
     <header>
-        <div class="header-content">
+        <div class="nav">
             <p class="logo">Sidiqi Fragance</p>
             <p class="contact">Contact us</p>
         </div>
     </header>
     <main>
-        <section>
-            <div class="nav">
+        <section class="header">
+            <div class="header-content">
                 <h1>Sidiqi Fragances.</h1>
                 <p>Offering a deep, evolving, and long-lasting scent that is both cultural heritage and liquid luxury.</p>
             </div>
+            <div class="background-image"><div>
         </section>
         <section>
             <div class="filter-list">
                 <form>
                     <fieldset>
-                        <legend>Filter by Price</legend>
+                        <legend>Filter by</legend>
 
                         <div class="min-filter-price">
-                            <label for="MinPrice">Min Price></label>
+                            <label for="MinPrice">Min Price</label>
                             <input type="number" id="minPrice"/>
                         </div>
 
                         <div class="max-filter-price">
-                            <label for="maxPrice">Max Price></label>
+                            <label for="maxPrice">Max Price</label>
                             <input type="number" id="maxPrice"/>
                         </div>
-                        <button type="submit">Apply</button>
+                        <div class="filter-ml">
+                            <label for="mlDropdown">ML</label>
+                            <select id="mlDropdown">
+                                <option value="" selected></option>
+                                <option>6</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="apply-filter">
+                            <button type="submit">Apply</button>
+                        </div>
                     </fieldset>
                 </form>
             </div>
@@ -43,5 +61,6 @@
         </section>
     </main>
     <footer></footer>
+    <script src="/index.js" type="module"></script>
 </body>
 </html>
