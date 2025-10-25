@@ -6,10 +6,13 @@ body {
     color: #EFEFEF;
 }
 
-h1, .logo {
-    font-family: "Italianno", sans-serif, serif;
+h1, .logo, p {
     padding: 0;
     margin: 0;
+}
+
+h1, .logo  {
+    font-family: "Italianno", sans-serif, serif;
 }
 
 h1 {
@@ -113,4 +116,69 @@ button {
 button:hover {
     background-color: greenyellow;
     cursor: pointer;
+}
+
+
+/* Ittars */
+
+.item-lists {
+    width: 50%;
+    margin: 55px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.item-lists img {
+    flex-basis: 33.333%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 250px;
+
+}
+
+
+.page-list-container {
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page-number-container {
+    color: black;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    border-radius: 15px;
+}
+
+.page-number-container:hover {
+     background-color: gold;
+     border-radius: 15px;
+     transition-delay: 0s;
+}
+
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+.contact > p {
+    margin-bottom: 20px;
 }
