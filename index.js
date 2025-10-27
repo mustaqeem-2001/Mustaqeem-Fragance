@@ -3,9 +3,16 @@ import { ittarData } from '/data.js';
 
 const itemListsEl = document.getElementById("itemLists");
 const pageNumberEl = document.getElementById("pageListContainer");
+const minPriceInput = document.getElementById("minPrice");
+const maxPriceInput = document.getElementById("maxPrice");
+const sizeDropdown = document.getElementById("mlDropdown");
+
+
 
 let pageCount = 0;
 let maxperPage = 9;
+
+
 
 
 pageNumberEl.addEventListener("click", function(e) {
@@ -19,6 +26,26 @@ pageNumberEl.addEventListener("click", function(e) {
     else {
         console.error("Empty Id");
     }
+})
+
+
+
+applyFilterBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    const minPrice =  minPriceInput.value;
+    const size = Number(sizeDropdown.value);
+    const maxPrice = maxPriceInput.value;     
+    console.log(minPrice, maxPrice, size);
+
+    
+    const filteredIttars = ittarData.filter(function(ittar) {
+        const minPriceCheck = minPrice ? ittar.price >= minPrice : true;
+        const maxPriceCheck = maxPrice ? ittar.price <= maxPrice : true;
+        const sizeCheck = size ? ittar.size === size : true;
+
+        return minPriceCheck && maxPriceCheck && sizeCheck;
+    })
+    console.log(filteredIttars)
 })
 
 function render(array) {
