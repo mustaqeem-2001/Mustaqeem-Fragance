@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Instrument Serif",sans-serif, serif;
-    background-color: #201D1D;
+    background: linear-gradient(#000000, #333333, #666666);
     color: #EFEFEF;
 }
 
@@ -23,11 +23,9 @@ h1 {
 /* navigation */
 
 .nav {
-    display: flex;
-    justify-content:space-between;
-    width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
+    background: rgba(245, 245, 245, 0.966);
+    text-align: center;
+    color: black;
 }
 
 .logo {
@@ -36,24 +34,24 @@ h1 {
 
 /* header */
 
-.header {
-    display: flex;
-    
+.background-banner {
+    width: 100%;
+    border-bottom: 2px solid gold;;
 }
 
- .background-image {
-    background-image: url("/images/image02.png");
-    background-repeat: no-repeat;
+.header-title {
+    position: absolute;
+    top: 2em;
+    left: 2.5em;
+    z-index: 1000;
 }
 
-.header-content {
-    display: flex;
-    width: 50%;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid white;
+.header-text {
+    position: absolute;
+    top: 17em;
+    left: 7.5em;
+    z-index: 1000;
 }
-
 
 /* content */
 
@@ -125,10 +123,9 @@ button:hover {
 /* Ittars */
 
 .item-lists {
-    width: 50%;
+    width: 58%;
     margin: 55px auto 0;
     display: flex;
-    flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 50px;
 }
@@ -207,4 +204,13 @@ button:hover {
 
 .fa-whatsapp {
     margin-right: 6px;
+}
+
+.whatsapp-fixed-position-logo > img {
+    width: 95px;
+    height: 85px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
 }
