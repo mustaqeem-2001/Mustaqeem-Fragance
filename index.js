@@ -9,19 +9,19 @@ const sizeDropdown = document.getElementById("mlDropdown");
 
 
 
-let pageCount = 0;
+let pageCount = 1;
 let maxperPage = 9;
-
+let lastData = [];
 
 
 
 pageNumberEl.addEventListener("click", function(e) {
-    console.log(e.target.id);
+    console.log(e);
     if (e.target.id && e.target.classList.contains("page-list-container")) {
         console.error("Did not click a page number.")
     }
     else if(e.target.id) {
-        pageSections(e.target.id.replace("page", ''));
+        pageSections(e.target.id.replace("page", ''), lastData);
     }
     else {
         console.error("Empty Id");
@@ -32,12 +32,10 @@ pageNumberEl.addEventListener("click", function(e) {
 
 applyFilterBtn.addEventListener("click", function(e) {
     e.preventDefault();
-    const minPrice =  minPriceInput.value;
+    const minPrice =  Number(minPriceInput.value);
     const size = Number(sizeDropdown.value);
-    const maxPrice = maxPriceInput.value;     
-    console.log(minPrice, maxPrice, size);
+    const maxPrice = Number(maxPriceInput.value);     
 
-    
     const filteredIttars = ittarData.filter(function(ittar) {
         const minPriceCheck = minPrice ? ittar.price >= minPrice : true;
         const maxPriceCheck = maxPrice ? ittar.price <= maxPrice : true;
@@ -45,40 +43,54 @@ applyFilterBtn.addEventListener("click", function(e) {
 
         return minPriceCheck && maxPriceCheck && sizeCheck;
     })
-    console.log(filteredIttars)
+    console.log(filteredIttars);
+    totalPageCount(filteredIttars);
 })
 
-function render(array) {
-    const itemListsHTML = array.map(function(ittar) {
+function render(data) {
+    const itemListsHTML = data.map(function(ittar) {
         return `
         <div>
             <img src="/images/${ittar.image}"/>
-            <p>${ittar.name} <span>${ittar.size}</span></p>
-            <p>£${ittar.price}</p>
+            <p class="ittar-name-p">${ittar.name} <span class="ittar-size-span">${ittar.size}ML</span></p>
+            <p class="ittar-price-p">£${ittar.price}</p>
         </div>
         `
     }).join('');
     itemListsEl.innerHTML = itemListsHTML;
 }
 
-function totalPageCount() {
+function totalPageCount(data) {
     let pageNumberHTML = ``;
-    while (pageCount < ittarData.length / 9) {
-        pageCount++;
-        pageNumberHTML += `
+
+    let dividedBy = data.length / 9;
+    let remainder = data.length % 9;
+    
+    if (remainder > 0) {
+        dividedBy++;
+    }
+    
+    while(pageCount <= dividedBy) { 
+        pageNumberHTML +=`
         <div class="page-number-container" id="page${pageCount}">
             ${pageCount}
-        </div>
-        `
+        </div>`
+        pageCount++;
     }
-    pageNumberEl.innerHTML = pageNumberHTML;
+
+    pageNumberEl.innerHTML = pageNumberHTML;    
+    pageCount = 1;
+    lastData = data;
+    pageSections(undefined, data);
 }
 
-function pageSections(pageNumber = 1) {
+function pageSections(pageNumber = 1, data) {
     const startIndex = (pageNumber - 1) * maxperPage;
     const endIndex = startIndex + maxperPage;
-    const pageData = ittarData.slice(startIndex, endIndex);
+
+    console.log(pageNumber)
+
+    const pageData = data.slice(startIndex, endIndex);
     render(pageData);
 }
-pageSections();
-totalPageCount();
+totalPageCount(ittarData);

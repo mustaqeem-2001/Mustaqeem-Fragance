@@ -36,12 +36,15 @@ h1 {
 
 /* header */
 
-/* .background-image {
+.header {
+    display: flex;
+    
+}
+
+ .background-image {
     background-image: url("/images/image02.png");
     background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-} */
+}
 
 .header-content {
     display: flex;
@@ -139,6 +142,22 @@ button:hover {
 }
 
 
+.ittar-name-p, .ittar-price-p {
+    margin-top: 10px;
+    font-size: 1.25em;
+}
+
+.ittar-size-span {
+    margin-left: 8px;
+    font-size: 0.75em;
+}
+
+.ittar-price-p {
+    color: #e8a016;
+}
+
+/* Pages */
+
 .page-list-container {
     background-color: white;
     width: 200px;
@@ -172,13 +191,20 @@ button:hover {
 
 
 
+/* Contact */
+
 .contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
+    font-weight: 900;
 }
 .contact > p {
     margin-bottom: 20px;
+}
+
+.fa-whatsapp {
+    margin-right: 6px;
 }
