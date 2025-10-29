@@ -50,7 +50,7 @@ applyFilterBtn.addEventListener("click", function(e) {
 function render(data) {
     const itemListsHTML = data.map(function(ittar) {
         return `
-        <div>
+        <div class="item">
             <img src="/images/${ittar.image}"/>
             <p class="ittar-name-p">${ittar.name} <span class="ittar-size-span">${ittar.size}ML</span></p>
             <p class="ittar-price-p">£${ittar.price}</p>

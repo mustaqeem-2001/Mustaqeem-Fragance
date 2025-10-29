@@ -130,6 +130,10 @@ button:hover {
     gap: 50px;
 }
 
+.item {
+    margin: auto;
+}
+
 .item-lists img {
     flex-basis: 33.333%;
     flex-grow: 0;
@@ -145,7 +149,7 @@ button:hover {
 }
 
 .ittar-size-span {
-    margin-left: 8px;
+    display: block;
     font-size: 0.75em;
 }
 
@@ -186,8 +190,6 @@ button:hover {
      transition-delay: 0s;
 }
 
-
-
 /* Contact */
 
 .contact {
@@ -214,3 +216,521 @@ button:hover {
     right: 0;
     z-index: 1000;
 }
+
+
+
+/* Media Queries */
+
+
+/* Phone */
+
+
+
+
+/* @media screen and (min-width: 300px) { 
+
+    .logo {
+        font-size: 1em;
+
+    }
+    .header-title {
+        top: 5%;
+        left: 15%;
+        font-size: 1em;
+    }
+
+    .header-text {
+        top: 8%;
+        left: 5%;
+        width: 44%;
+        text-align: center;
+        font-size: 0.5em;
+    }
+
+    fieldset {
+        display: block;
+    }
+
+    .apply-filter {
+        margin-left: auto;
+    }
+    fieldset, legend, #applyFilterBtn {
+        font-size: 0.5em;
+    }
+
+    .max-filter-price {
+        margin: 10px 0;
+    }
+    .item-lists {
+        width: 150px;
+        gap: 6px;
+        text-align: center;
+        font-size: 0.3em;
+    }
+
+    .item {
+        width: 60px;
+    }
+    .item img {
+        width: 60px;
+    }
+
+    .ittar-name-p {
+        width: 60px;
+    }
+    .ittar-size-span {
+        display: block;
+    }
+
+    .contact-text {
+        font-size: 0.5em;
+        font-weight: lighter;
+    }
+
+    .page-list-container {
+        width: 100px;
+        height: 30px;
+    }
+
+    .page-number-container {
+        font-size: 0.5em;
+    }
+
+    .page-number-container:hover {
+        width: 44px;
+        height: 30px;
+        background-color: gold;
+        border-radius: 25px;
+    }
+
+    .whatsapp-fixed-position-logo > img {
+        width: 44px;
+        height: 40px;
+    }
+
+    @media screen and (min-width: 359px) {
+        .header-title {
+            top: 6%;
+            left: 15%;
+        }
+
+        .header-text {
+            top: 9%;
+            left: 5%;
+        }
+    }
+
+} */
+
+
+/* 
+@media screen and (max-width: 356px) { 
+
+    .logo {
+        font-size: 1em;
+    }
+     .header-title {
+        top: 6%;
+        left: 13%;
+        font-size: 1em;
+    }
+
+    .header-text {
+        top: 10%;
+        left: 5%;
+        width: 44%;
+        text-align: center;
+        font-size: 0.5em;
+    }
+
+    fieldset {
+        display: block;
+    }
+
+    .apply-filter {
+        margin-left: auto;
+    }
+    fieldset, legend, #applyFilterBtn {
+        font-size: 0.5em;
+    }
+
+    .max-filter-price {
+        margin: 10px 0;
+    }
+    .item-lists {
+        width: 150px;
+        gap: 6px;
+        text-align: center;
+        font-size: 0.3em;
+    }
+
+    .item {
+        width: 60px;
+    }
+    .item img {
+        width: 60px;
+    }
+
+    .ittar-name-p {
+        width: 60px;
+    }
+    .ittar-size-span {
+        display: block;
+    }
+
+    .contact-text {
+        font-size: 0.5em;
+        font-weight: lighter;
+    }
+
+    .page-list-container {
+        width: 100px;
+        height: 30px;
+    }
+
+    .page-number-container {
+        font-size: 0.5em;
+    }
+
+    .page-number-container:hover {
+        width: 44px;
+        height: 30px;
+        background-color: gold;
+        border-radius: 25px;
+    }
+
+    .whatsapp-fixed-position-logo > img {
+        width: 44px;
+        height: 40px;
+    }
+
+}
+
+
+@media screen and (min-width: 356px) and (max-width: 510px) { 
+
+    .logo {
+        font-size: 1em;
+    }
+     .header-title {
+        top: 6.5%;
+        left: 16%;
+        font-size: 1em;
+    }
+
+    .header-text {
+        top: 11%;
+        left: 5%;
+        width: 44%;
+        text-align: center;
+        font-size: 0.5em;
+    }
+
+    fieldset {
+        display: block;
+    }
+
+    .apply-filter {
+        margin-left: auto;
+    }
+    fieldset, legend, #applyFilterBtn {
+        font-size: 0.5em;
+    }
+
+    .max-filter-price {
+        margin: 10px 0;
+    }
+    .item-lists {
+        width: 60%;
+        gap: 6px;
+        text-align: center;
+        font-size: 0.3em;
+    }
+
+    .item {
+        width: 60px;
+    }
+    .item img {
+        width: 60px;
+    }
+
+    .ittar-name-p {
+        width: 60px;
+    }
+    .ittar-size-span {
+        display: block;
+    }
+
+    .contact-text {
+        font-size: 0.5em;
+        font-weight: lighter;
+    }
+
+    .page-list-container {
+        width: 100px;
+        height: 30px;
+    }
+
+    .page-number-container {
+        font-size: 0.5em;
+    }
+
+    .whatsapp-fixed-position-logo > img {
+        width: 50px;
+        height: 44px;
+    }
+
+    @media screen and (min-width: 400px) and (max-width: 450px) {
+        .header-title {
+            top: 6%;
+            left: 18%;
+        }
+
+        .header-text {
+            top: 9%;
+            left: 5%;
+        }
+        }
+
+    @media screen and (min-width: 451px) and (max-width: 500px) {
+        .header-title {
+            top: 7%;
+            left: 19%;
+        }
+
+        .header-text {
+            top: 12%;
+            left: 5%;
+        }
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 600px) {
+        .item-lists {
+            width: 50%;
+            gap: 6px;
+            text-align: center;
+            font-size: 0.3em;
+        }
+
+        .header-title {
+            top: 10%;
+            left: 19%;
+        }
+
+        .header-text {
+            top: 15%;
+            left: 5%;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 999px) {
+    .item-lists {
+        width: 100%;
+    }
+     .header-title {
+        top: 12%;
+        left: 11%;
+        font-size: 3em;
+    }
+
+    .header-text {
+        top: 19%;
+        left: 6%;
+        width: 30%;
+        text-align: center;
+        margin-left: 20px;
+    }
+ }
+
+
+@media screen and (min-width: 1000px) and (max-width: 1249px) {
+    .item-lists {
+        width: 90%;
+    }
+     .header-title {
+        top: 14%;
+        left: 12%;
+        font-size: 3.5em;
+    }
+
+    .header-text {
+        top: 23%;
+        left: 7.5%;
+        font-size: 1em;
+        width: 30%;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1499px) { 
+    .logo {
+        font-size: 4em;
+    }
+
+    .item-lists {
+        width: 76%;
+    }
+
+    .header-title {
+        top: 18%;
+        left: 14%;
+        font-size: 4em;
+    }
+
+    .header-text {
+        top: 28%;
+        left: 10%;
+        font-size: 1em;
+        width: 30%;
+        text-align: center;
+    }
+
+    .page-list-container {
+        width: 200px;
+        height: 60px;
+    }
+
+    .page-number-container {
+        font-size: 1.1em;
+    }
+
+    .contact {
+        font-size: 1.8em;
+    }
+
+    .whatsapp-fixed-position-logo > img {
+        width: 125px;
+        height: 115px;
+    }
+
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1899px){ 
+    .logo {
+        font-size: 4em;
+    }
+
+    .item-lists {
+        width: 60%;
+    }
+
+    .header-title {
+        top: 20%;
+        left: 10%;
+        font-size: 7em;
+    }
+
+    .header-text {
+        top: 35%;
+        left: 5%;
+        font-size: 1.4em;
+    }
+
+    .page-list-container {
+        width: 200px;
+        height: 60px;
+    }
+
+    .page-number-container {
+        font-size: 1.2em;
+    }
+
+    .contact {
+        font-size: 2em;
+    }
+
+    .whatsapp-fixed-position-logo > img {
+        width: 144px;
+        height: 134px;
+    }
+
+}
+
+@media screen and (min-width: 1900px) and (max-width: 2199px){
+
+    .logo {
+        font-size: 5em;
+    }
+
+    .item-lists {
+        width: 52%;
+    }
+
+    .header-title {
+        top: 25%;
+        left: 15%;
+        font-size: 8em;
+    }
+
+    .header-text {
+        top: 43%;
+        left: 10%;
+        font-size: 1.6em;
+    }
+
+    .page-list-container {
+        width: 200px;
+        height: 60px;
+    }
+
+    .page-number-container {
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+
+    .contact {
+        font-size: 2em;
+    }
+
+    .whatsapp-fixed-position-logo > img {
+        width: 160px;
+        height: 150px;
+    }
+ }
+
+
+@media screen and (min-width: 2200px)  {
+
+    .logo {
+        font-size: 5em;
+    }
+
+    .item-lists {
+        width: 40%;
+    }
+
+    .header-title {
+        top: 25%;
+        left: 15%;
+        font-size: 10em;
+    }
+
+    .header-text {
+        top: 46.5%;
+        left: 10%;
+        font-size: 1.9em;
+    }
+
+    .page-list-container {
+        width: 225px;
+        height: 60px;
+    }
+
+    .page-number-container {
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+
+    .contact {
+        font-size: 3em;
+    }
+    
+    .whatsapp-fixed-position-logo > img {
+        width: 180px;
+        height: 170px;
+    }
+
+ } */
