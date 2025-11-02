@@ -34,24 +34,35 @@ h1 {
 
 /* header */
 
+.header {
+    display: grid;
+    grid-template-areas: "overlap"; 
+    
+    /* margin: 0 auto; */
+    }
+
 .background-banner {
+    grid-area: overlap;
     width: 100%;
+    height: auto;
+    /* display: block; */
+    /* Adjusts the image to fit in its container */
+    /* object-fit: cover; */
     border-bottom: 2px solid gold;;
+
 }
 
-.header-title {
-    position: absolute;
-    top: 2em;
-    left: 2.5em;
-    z-index: 1000;
+.image-text-and-title {
+    grid-area: overlap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    /* z-index: 2; */
+    max-width: 50%;
 }
 
-.header-text {
-    position: absolute;
-    top: 17em;
-    left: 7.5em;
-    z-index: 1000;
-}
 
 /* content */
 
@@ -74,7 +85,7 @@ legend {
 
 input, button, select {
     border: none;
-     border-radius: 5px;
+    border-radius: 5px;
 }
 
 /* Removes the spinner arrows for Chrome, Safari, Edge, and Opera */
@@ -144,7 +155,7 @@ button:hover {
 
 
 .ittar-name-p, .ittar-price-p {
-    margin-top: 10px;
+    margin: 10px auto 0;
     font-size: 1.25em;
 }
 
@@ -204,13 +215,17 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.contact-text {
+    font-weight: lighter;
+}
+
 .fa-whatsapp {
     margin-right: 6px;
 }
 
 .whatsapp-fixed-position-logo > img {
     width: 95px;
-    height: 85px;
+    height: 90px;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -224,35 +239,25 @@ button:hover {
 
 /* Phone */
 
-
-
-
-/* @media screen and (min-width: 300px) { 
-
+@media screen and (max-width: 575px) {  
     .logo {
         font-size: 1em;
-
     }
     .header-title {
-        top: 5%;
-        left: 15%;
         font-size: 1em;
     }
 
     .header-text {
-        top: 8%;
-        left: 5%;
-        width: 44%;
-        text-align: center;
+        margin-left: 8px;
         font-size: 0.5em;
     }
 
     fieldset {
         display: block;
     }
-
     .apply-filter {
-        margin-left: auto;
+        text-align: center;
+        margin: 0;
     }
     fieldset, legend, #applyFilterBtn {
         font-size: 0.5em;
@@ -261,8 +266,10 @@ button:hover {
     .max-filter-price {
         margin: 10px 0;
     }
+
     .item-lists {
-        width: 150px;
+        min-width: 150px;
+        max-width: 250px;
         gap: 6px;
         text-align: center;
         font-size: 0.3em;
@@ -278,13 +285,13 @@ button:hover {
     .ittar-name-p {
         width: 60px;
     }
-    .ittar-size-span {
-        display: block;
+
+    .ittar-price-p {
+        font-size: 1.5em;
     }
 
     .contact-text {
         font-size: 0.5em;
-        font-weight: lighter;
     }
 
     .page-list-container {
@@ -307,430 +314,155 @@ button:hover {
         width: 44px;
         height: 40px;
     }
+}
 
-    @media screen and (min-width: 359px) {
-        .header-title {
-            top: 6%;
-            left: 15%;
-        }
-
-        .header-text {
-            top: 9%;
-            left: 5%;
-        }
+@media screen and (min-width: 330px) and (max-width: 450px) {
+    .whatsapp-fixed-position-logo > img {
+        width: 55px;
+        height: 50px;
     }
+}
 
-} */
 
-
-/* 
-@media screen and (max-width: 356px) { 
-
+@media screen and (min-width: 450px) and (max-width: 575px){  
     .logo {
-        font-size: 1em;
+        font-size: 2em;
     }
-     .header-title {
-        top: 6%;
-        left: 13%;
-        font-size: 1em;
+    .header-title {
+        font-size: 1.5em;
     }
 
     .header-text {
-        top: 10%;
-        left: 5%;
-        width: 44%;
-        text-align: center;
-        font-size: 0.5em;
+        margin-left: 8px;
+        font-size: 0.65em;
     }
 
-    fieldset {
-        display: block;
-    }
-
-    .apply-filter {
-        margin-left: auto;
-    }
     fieldset, legend, #applyFilterBtn {
-        font-size: 0.5em;
+        font-size: 0.7em;
     }
 
-    .max-filter-price {
-        margin: 10px 0;
-    }
     .item-lists {
-        width: 150px;
+        max-width: 350px;
         gap: 6px;
         text-align: center;
         font-size: 0.3em;
     }
 
     .item {
-        width: 60px;
+        width: 80px;
     }
     .item img {
-        width: 60px;
+        width: 70px;
     }
 
     .ittar-name-p {
-        width: 60px;
-    }
-    .ittar-size-span {
-        display: block;
-    }
-
-    .contact-text {
-        font-size: 0.5em;
-        font-weight: lighter;
-    }
-
-    .page-list-container {
-        width: 100px;
-        height: 30px;
-    }
-
-    .page-number-container {
-        font-size: 0.5em;
-    }
-
-    .page-number-container:hover {
-        width: 44px;
-        height: 30px;
-        background-color: gold;
-        border-radius: 25px;
-    }
-
-    .whatsapp-fixed-position-logo > img {
-        width: 44px;
-        height: 40px;
-    }
-
-}
-
-
-@media screen and (min-width: 356px) and (max-width: 510px) { 
-
-    .logo {
-        font-size: 1em;
-    }
-     .header-title {
-        top: 6.5%;
-        left: 16%;
-        font-size: 1em;
-    }
-
-    .header-text {
-        top: 11%;
-        left: 5%;
-        width: 44%;
-        text-align: center;
-        font-size: 0.5em;
-    }
-
-    fieldset {
-        display: block;
-    }
-
-    .apply-filter {
-        margin-left: auto;
-    }
-    fieldset, legend, #applyFilterBtn {
-        font-size: 0.5em;
-    }
-
-    .max-filter-price {
-        margin: 10px 0;
-    }
-    .item-lists {
-        width: 60%;
-        gap: 6px;
-        text-align: center;
-        font-size: 0.3em;
-    }
-
-    .item {
-        width: 60px;
-    }
-    .item img {
-        width: 60px;
-    }
-
-    .ittar-name-p {
-        width: 60px;
-    }
-    .ittar-size-span {
-        display: block;
-    }
-
-    .contact-text {
-        font-size: 0.5em;
-        font-weight: lighter;
-    }
-
-    .page-list-container {
-        width: 100px;
-        height: 30px;
-    }
-
-    .page-number-container {
-        font-size: 0.5em;
-    }
-
-    .whatsapp-fixed-position-logo > img {
-        width: 50px;
-        height: 44px;
-    }
-
-    @media screen and (min-width: 400px) and (max-width: 450px) {
-        .header-title {
-            top: 6%;
-            left: 18%;
-        }
-
-        .header-text {
-            top: 9%;
-            left: 5%;
-        }
-        }
-
-    @media screen and (min-width: 451px) and (max-width: 500px) {
-        .header-title {
-            top: 7%;
-            left: 19%;
-        }
-
-        .header-text {
-            top: 12%;
-            left: 5%;
-        }
-    }
-
-    @media screen and (min-width: 500px) and (max-width: 600px) {
-        .item-lists {
-            width: 50%;
-            gap: 6px;
-            text-align: center;
-            font-size: 0.3em;
-        }
-
-        .header-title {
-            top: 10%;
-            left: 19%;
-        }
-
-        .header-text {
-            top: 15%;
-            left: 5%;
-        }
-    }
-}
-
-@media screen and (min-width: 800px) and (max-width: 999px) {
-    .item-lists {
-        width: 100%;
-    }
-     .header-title {
-        top: 12%;
-        left: 11%;
-        font-size: 3em;
-    }
-
-    .header-text {
-        top: 19%;
-        left: 6%;
-        width: 30%;
-        text-align: center;
-        margin-left: 20px;
-    }
- }
-
-
-@media screen and (min-width: 1000px) and (max-width: 1249px) {
-    .item-lists {
-        width: 90%;
-    }
-     .header-title {
-        top: 14%;
-        left: 12%;
-        font-size: 3.5em;
-    }
-
-    .header-text {
-        top: 23%;
-        left: 7.5%;
-        font-size: 1em;
-        width: 30%;
-        text-align: center;
-        margin-left: 20px;
-    }
-
-}
-
-@media screen and (min-width: 1250px) and (max-width: 1499px) { 
-    .logo {
-        font-size: 4em;
-    }
-
-    .item-lists {
-        width: 76%;
-    }
-
-    .header-title {
-        top: 18%;
-        left: 14%;
-        font-size: 4em;
-    }
-
-    .header-text {
-        top: 28%;
-        left: 10%;
-        font-size: 1em;
-        width: 30%;
-        text-align: center;
-    }
-
-    .page-list-container {
-        width: 200px;
-        height: 60px;
-    }
-
-    .page-number-container {
-        font-size: 1.1em;
-    }
-
-    .contact {
-        font-size: 1.8em;
-    }
-
-    .whatsapp-fixed-position-logo > img {
-        width: 125px;
-        height: 115px;
-    }
-
-}
-
-@media screen and (min-width: 1500px) and (max-width: 1899px){ 
-    .logo {
-        font-size: 4em;
-    }
-
-    .item-lists {
-        width: 60%;
-    }
-
-    .header-title {
-        top: 20%;
-        left: 10%;
-        font-size: 7em;
-    }
-
-    .header-text {
-        top: 35%;
-        left: 5%;
-        font-size: 1.4em;
-    }
-
-    .page-list-container {
-        width: 200px;
-        height: 60px;
-    }
-
-    .page-number-container {
-        font-size: 1.2em;
-    }
-
-    .contact {
-        font-size: 2em;
-    }
-
-    .whatsapp-fixed-position-logo > img {
-        width: 144px;
-        height: 134px;
-    }
-
-}
-
-@media screen and (min-width: 1900px) and (max-width: 2199px){
-
-    .logo {
-        font-size: 5em;
-    }
-
-    .item-lists {
-        width: 52%;
-    }
-
-    .header-title {
-        top: 25%;
-        left: 15%;
-        font-size: 8em;
-    }
-
-    .header-text {
-        top: 43%;
-        left: 10%;
-        font-size: 1.6em;
-    }
-
-    .page-list-container {
-        width: 200px;
-        height: 60px;
-    }
-
-    .page-number-container {
-        font-size: 1.4em;
-        font-weight: 600;
-    }
-
-    .contact {
-        font-size: 2em;
-    }
-
-    .whatsapp-fixed-position-logo > img {
-        width: 160px;
-        height: 150px;
-    }
- }
-
-
-@media screen and (min-width: 2200px)  {
-
-    .logo {
-        font-size: 5em;
-    }
-
-    .item-lists {
-        width: 40%;
-    }
-
-    .header-title {
-        top: 25%;
-        left: 15%;
-        font-size: 10em;
-    }
-
-    .header-text {
-        top: 46.5%;
-        left: 10%;
+        width: 70px;
         font-size: 1.9em;
     }
 
-    .page-list-container {
-        width: 225px;
-        height: 60px;
+    .ittar-price-p {
+        font-size: 2.5em;
+    }
+
+    .contact-text {
+        font-size: 0.7em;
     }
 
     .page-number-container {
-        font-size: 1.5em;
-        font-weight: 900;
+        font-size: 0.7em;
     }
 
-    .contact {
+    .page-number-container:hover {
+        width: 44px;
+        height: 30px;
+        background-color: gold;
+        border-radius: 25px;
+    }
+
+    .whatsapp-fixed-position-logo > img {
+        width: 66px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width: 697px) {
+    .prices-input {
+        width: 55%;
+    }
+}
+
+
+/* Tablets and large phones */
+@media screen and (min-width: 575px) and (max-width: 1000px){  
+    .logo {
         font-size: 3em;
+    }
+    .header-title {
+        font-size: 3em;
+    }
+
+    .header-text {
+        margin-left: 8px;
+        font-size: 0.75em;
+    }
+
+
+    fieldset, legend, #applyFilterBtn {
+        font-size: 0.7em;
+    }
+
+    .item-lists {
+        max-width: 500px;
+        gap: 25px;
+        text-align: center;
+        font-size: 0.3em;
+    }
+
+    .item {
+        width: 28%;
+    }
+    .item img {
+        width: 100%;
+    }
+
+    .ittar-price-p {
+        font-size: 3.5em;
+    }
+
+    .ittar-name-p {
+        text-align: center;
+        width: 100%;
+        font-size: 2.50em;
+        margin: 10px auto 0;
+    }
+    .contact-text {
+        font-size: 0.7em;
+    }
+
+    .page-number-container {
+        font-size: 1em;
+    }
+
+    .page-number-container:hover {
+        width: 44px;
+        height: 30px;
+        background-color: gold;
+        border-radius: 25px;
+    }
+
+    .whatsapp-fixed-position-logo > img {
+        width: 66px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    .contact-text {
+        font-size: 1em;
     }
     
     .whatsapp-fixed-position-logo > img {
-        width: 180px;
-        height: 170px;
+        width: 80px;
+        height: 75px;
     }
-
- } */
+}
