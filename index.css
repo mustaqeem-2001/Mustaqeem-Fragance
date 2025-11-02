@@ -276,18 +276,19 @@ button:hover {
     }
 
     .item {
-        width: 60px;
+        width: 70px;
     }
     .item img {
         width: 60px;
     }
+    
 
     .ittar-name-p {
         width: 70px;
     }
 
     .ittar-price-p {
-        font-size: 1.5em;
+        font-size: 3em;
     }
 
     .contact-text {
