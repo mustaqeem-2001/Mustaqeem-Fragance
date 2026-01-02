@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,69 +16,8 @@
     <!-- Title -->
     <title>Mustaqeem's Fragance</title>
 </head>
-<body>
-    <header>
-        <div class="nav">
-            <p class="logo">Mustaqeem's Fragance</p>
-        </div>
-    </header>
-    <main>
-        <section class="header">
-            <img class="background-banner" src="/images/background-banner-with-no-text.png" alt="banner containing ittar, logo name, and short description."/>
-            <div class="image-text-and-title">
-                <h1 class="header-title">Mustaqeem's Frangence</h1>
-                <p class="header-text">Offering a deep, evolving, and long-lasting scent that is both cultural heritage and liquid luxury.</p>
-            </div>
-        </section>
-        <section>
-            <div class="filter-list">
-                <form>
-                    <fieldset>
-                        <legend>Filter by</legend>
-
-                        <div class="min-filter-price">
-                            <label for="minPrice">Min Price</label>
-                            <input type="number" id="minPrice" class="prices-input"/>
-                        </div>
-
-                        <div class="max-filter-price">
-                            <label for="maxPrice">Max Price</label>
-                            <input type="number" id="maxPrice" class="prices-input"/>
-                        </div>
-                        <div class="filter-ml">
-                            <label for="mlDropdown">ML</label>
-                            <select id="mlDropdown" class="prices-input">
-                                <option value="" selected></option>
-                                <option>6</option>
-                                <option>3</option>
-                            </select>
-                        </div>
-                        <div class="apply-filter">
-                            <button type="submit" id="applyFilterBtn">Apply</button>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="item-lists" id="itemLists"></div>
-            <div class="page-list-container" id="pageListContainer"></div>
-        </section>
-
-        <section>
-            <div class="contact">
-                <p class="contact-text">
-                    Please contact us for purchasing and for support at the following:
-                </p>
-                <p class="contact-text"> <i class="fa-brands fa-whatsapp"></i>07534249940</p>
-            </div>
-
-            <a class="whatsapp-fixed-position-logo" 
-                href="https://wa.me/+447534249940?text=Hello%20I%20want%20to%20contact%20you" 
-                target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
-                <img src="/images/whatsapp-icon-design.png" class="whatsapp-icon-design" alt="Direct link to whatsapp contact"/>
-            </a>
-        </section>
-    </main>
-    <footer></footer>
-    <script src="/index.js" type="module"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
