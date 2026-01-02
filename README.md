@@ -1,16 +1,53 @@
-# React + Vite
+# Purpose
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple front-end web app that displays a list of ittar (fragrance) products.
+Users can filter items by price and size (ML) and browse them using pagination.
+It’s built with plain HTML, CSS, and JavaScript. It is designed and developed to use logic which dynamically processes inputs to display information on the screen using DOM manipulation
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Major Features
 
-## React Compiler
+Display ittar products from a data file
+Filter products by: Minimum price & Maximum price
+Bottle size (ML)
+Pagination (9 items per page)
+Responsive layout for mobile, tablet, and desktop
+Fixed WhatsApp contact button
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# How It Works
 
-## Expanding the ESLint configuration
+Product data is stored in data.js
+JavaScript dynamically:
+Renders items to the DOM
+Filters data based on user input
+Handles page navigation
+CSS handles layout, styling, and media queries
+HTML provides the page structure and form controls
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# Technologies Used
+
+HTML5
+CSS3 (Flexbox, Grid, Media Queries)
+Vanilla JavaScript (ES Modules)
+Google Fonts
+Font Awesome (CDN)
+
+# Dependencies
+
+No build tools or frameworks are required.
+
+
+# Visit website
+
+https://mustaqeems-frangence.netlify.app
+
+# How to Run Locally
+
+Clone the repository: git clone https://github.com/your-username/your-repo-name.git
+Open the project folder
+Run using a local server (required because ES modules are used)
+
+Example: npx serve
+
+or use VS Code Live Server.
